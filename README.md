@@ -1,1 +1,1 @@
-# edanial
+Eystein Danial - Intel CKT Training
