@@ -275,13 +275,162 @@
  *Step20: Assigning the names of the terminals of the NMOS and PMOS
  # ![image](https://user-images.githubusercontent.com/121995963/212459436-72cd2579-e7c8-407f-9179-9f69e5fd3398.png)
 
- **References from:** https://www.watelectronics.com/understanding-cmos-fabrication-technology/#:~:text=20%20Steps%20of%20CMOS%20Fabrication%20Process%201%20Step2%3A,8%20Step9%3A%20Removal%20of%20SiO2%20...%20More%20items
+ **Fabrication Process References:** https://www.watelectronics.com/understanding-cmos-fabrication-technology/#:~:text=20%20Steps%20of%20CMOS%20Fabrication%20Process%201%20Step2%3A,8%20Step9%3A%20Removal%20of%20SiO2%20...%20More%20items
 
 **Sand to Silicon illutration:**
  ![image](https://user-images.githubusercontent.com/121995963/212457991-8c89d091-61c2-48da-b22e-d30bf806948a.png)
 </details>
 
+<Details>
+<summary>Lab</summary>
+</details>
 
- <Details>
+
+## Day 3
+### Topic - CMOS Fabrication Process in Deep Submicron and Ultra Deep Submicron Technology
+<details>
+ <summary>Theory</summary>
+ 
+**Disadvantange of the Submicron CMOS Process**
+ Isolation of transistors:
+  * The use of reverse bias pn junction to isolate transistors become impractical as the transistor sizes decrease. 
+ 
+ * Local Oxidation of Silicon (LOCOS) Isolation Process
+  1) A very this layer silicon dioxie is grown on the wafer, called as pad oxide. Then a layer of silicon nitride is deposited which is used as an oxdie barrier
+  2) Then by thermal oxidation process thick oxide is grown in the exposed area.
+  3) Lastly, the removal of the silicon nitride layer.
+     * The limiation of this technique is the bird's beak effect and the surface area which is lost to this encroachment.
+     * The advatages of LOCOS fabrication process is simple and higg oxide quality because LOCOS strcuture is thermally grown.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/212460949-9426b08c-9e0e-437a-8153-0c45132ac4f2.png)
+
+ **Sallow Trench Isolation Technology**
+   * Shallow trench isolation (STI) allows closer spacing of transistors by eliminating the depletion region at the surface and Bird’s beak effect due to LOCOS process
+   * Sallow Trench Isolation (STI) isolation process is the preferred isolation process for deep-submicron process because it completely avoids Bird’s beak shape            characteristics.
+        a. Cover the wafer with pad oxide and silicon nitride.
+        b. First etch nitride and pad oxide. Next, an anisotropic etch is made in the silicon to a depth of 0.4 to 0.5 microns.
+        c. Grow a thin thermal oxide layer on the trench walls
+        d. A CVD dielectric film is used to fill the trench
+        e. A chemical mechanical polishing (CMP) step is used to polish back the dielectric layer until the nitride is reached. The nitride acts like a CMP stop layer.
+        f. Densify the dielectric material at 900°C and strip the nitride and pad oxide.
+  * STI is more suitable for the increased density in a small area because it allows forming smaller isolation regions.
+  * The disadvantage is larger number of process steps.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/212461111-a8b37f4f-684b-4e16-921e-9a5c2ee5fdca.png)
+
+**Deep Submicron (DSM) CMOS Technology other uses**
+ * A deep n-wellthat can be utilized to reduce substrate noise coupling.
+ * A MOS Varactor that can be used to make volatage controlled osillators 
+ 
+ **Different Types of Resistor in Deep Submicron (DSM) CMOS Technology**  
+ # ![image](https://user-images.githubusercontent.com/121995963/212461642-a0b62304-ee18-4ec5-96f8-cb0e5399d115.png)
+ # ![image](https://user-images.githubusercontent.com/121995963/212461650-f6113eee-943c-44e7-8053-00bc556182b1.png)
+
+**Typical Deep Submicron (DSM) CMOS Fabrication Process**  
+    Major Fabrication Steps for a DSM CMOS Process  
+      1) p and n wells  
+      2) Shallow trench isolation  
+      3) Threshold shift and anti-punch through implants  
+      4) Thin oxide and gate polysilicon  
+      5) Lightly doped drains and sources  
+      6) Sidewall spacer  
+      7) Heavily doped drains and sources  
+      8) Siliciding (Salicide and Polycide)  
+      9) Bottom metal, tungsten plugs, and oxide  
+      10) Higher level metals, tungsten plugs/vias, and oxide  
+      11) Top level metal, vias and protective oxide   
+ 
+ **Deep Submicron (DSM) CMOS Fabrication Process** 
+ * Step 1: n and p well Creation: 
+ ![image](https://user-images.githubusercontent.com/121995963/212461850-e9e8d122-97a9-4a38-80fe-716e91f81fcb.png)
+ 
+ * Step 2: Sallow Trench Isolation 
+  * The shallow trench isolation (STI) electrically isolates one region/transistor from another.
+ ![image](https://user-images.githubusercontent.com/121995963/212461904-dd9f195d-3454-4b51-85c2-137f4aa0eb8b.png)
+ 
+ * Step 3: Threshold Shift and Anti-Punch Through Implants
+  * The natural thresholds of the NMOS is about 0V and of the PMOS is about –1.2V. An p-implant is used to make the NMOS harder to invert and the PMOS easier resulting     in threshold voltages balanced around zero volts.
+  * Also an implant can be applied to create a higher-doped region beneath the channels to prevent punch-through from the drain depletion region extending to source       depletion region.
+ ![image](https://user-images.githubusercontent.com/121995963/212461938-5d656194-2702-42b7-9e12-81a7de9fa03e.png)
+ 
+ * Step 4: Thin Oxide and Polysilicon Gates
+   * A  thin oxide is deposited followed by polysilicon. These layers are removed where they are not wanted.
+   ![image](https://user-images.githubusercontent.com/121995963/212462012-2858a2f1-fc40-44c1-bf3b-65f8cb649877.png)
+
+ * Step 5: Lightly Doped Drains and Sources
+   * A lightly-doped implant is used to create a lightly-doped source and drain next to the channel of the MOSFETs.
+   ![image](https://user-images.githubusercontent.com/121995963/212462052-c8681646-a244-46f9-8e7b-ce84d83d8a7c.png)
+
+ * Step 6: Sidewall Spacers
+   * A layer of dielectric is deposited on the surface and removed in such a way as to leave “sidewall spacers” next to the thin-oxide-polysilicon-polycide sandwich.        These sidewall spacers will prevent the part of the source and drain next to the channel from becoming heavily doped.
+     ![image](https://user-images.githubusercontent.com/121995963/212462091-32e6014f-e949-43bc-9082-c3e3a6102250.png)
+
+ * Step 7: Implantation of the Heavily Doped Sources and Drains
+   * Note that not only does this step provide the completed sources and drains but allows for ohmic contact into the wells and substrate.
+    ![image](https://user-images.githubusercontent.com/121995963/212462104-8d151311-9d2f-4e88-a58c-e260b6663db8.png)
+ 
+ * Step 8: Siliciding (Salicide and Polycide)
+   * This step reduces the resistance of the bulk diffusions and polysilicon and forms an ohmic contact with material on which it is deposited. .
+     Salicide = Self-aligned silicide
+    ![image](https://user-images.githubusercontent.com/121995963/212462162-e7f519e3-c5a1-40a9-adff-424497c2183e.png) 
+
+ * Step 9: Intermediate Oxide Layer
+   * An oxide layer is used to cover the transistors and to planarize the surface.
+     ![image](https://user-images.githubusercontent.com/121995963/212462191-cdc87155-fe1e-44a5-8fed-42018b2fc5c4.png)
+
+ * Step 10: First-Level Metal
+   * Tungsten plugs are built through the lower intermediate oxide layer to provide contact between the devices, wells and substrate to the first-level metal.
+     ![image](https://user-images.githubusercontent.com/121995963/212462208-9a6452f8-02cf-463e-b435-a97011a28209.png)
+
+ * Step 11 – Second-Level Metal
+    * The previous step is repeated for the second-level metal.
+    ![image](https://user-images.githubusercontent.com/121995963/212462238-96ec05dc-fb3b-4355-b36a-ced1d4b83c26.png)
+
+* Completed Fabrication
+   * After multiple levels of metal are applied, the fabrication is completed with a thicker toplevel metal and a protective layer to hermetically seal the circuit        from the environment. Note that metal is used for the upper level metal vias. The chip is electrically connected by removing the protective layer over large            bonding pads.
+ ![image](https://user-images.githubusercontent.com/121995963/212462281-01ca4ad2-60ae-458a-b98b-73d49f9d93cd.png)
+
+**Summary of Deep Submicron (DSM) CMOS Fabrication Process**    
+   * DSM technology typically has a minimum channel length between 0.35μm and 0.1μm  
+   * DSM technology addresses the problem of excessive depletion region widths in junction isolation techniques by using shallow trench isolation  
+   * DSM technology may have from 4 to 8 levels of metal  
+   * Lightly doped drains and sources are a key aspect of DSM technology  
+    
+**Ultra Deep Submicron (UDSM) CMOS Technology**
+ * Minimum length is less than 0.1 microns
+ * Minimum feature size less than 100 nanometers
+ * 22 nm drawn length
+ * 5 nm lateral diffusion (12 nm gate length)
+ * 1 nm transistor gate oxide
+ * 8 layers of copper interconnect
+ * Specialized processing is used to increase drive capability and maintain low off currents
+        
+**Advantage of UDSM CMOS Technology**
+ * Digital Viewpoint:
+   * Improved Ion/Ioff
+   * Reduced gate capacitance
+   * Higher drive current capability
+   * Reduced interconnect density
+   * Reduction of active power
+        
+ * Analog Viewpoint:
+   * More levels of metal
+   * Higher cutoff frequency
+   * Higher capacitance density
+   * Reduced junction capacitance per transconductance
+   * More speed
+        
+**Disadvantage of UDSM CMOS Technology**
+ * Analog Viewpoint:
+   * Reduction in power supply resulting in reduced headroom
+   * Gate leakage currents
+   * Reduced small signal intrinsic gain
+   * Increased nonlinearity
+   * Increased noise and poorer matching
+</details>
+
+</details>
+
+<Details>
 <summary>Lab</summary>
 </details>
