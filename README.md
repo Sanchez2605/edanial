@@ -3,6 +3,7 @@
 * Day 1 - Fundamentals of VLSI Design and overview of Sand-to-Silicon
 * Day 2 - Details of IC Manufacturing Process
 * Day 3 - CMOS Fabrication Process in Deep Submicron and Ultra Deep Submicron Technology
+* Day 4 - Metal Oxide Semiconductor Structure
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
@@ -429,6 +430,14 @@
    * Increased noise and poorer matching
 </details>
 
+<Details>
+<summary>Lab</summary>
+</details>
+
+## Day 4
+### Topic - Metal Oxide Semiconductor Structure
+<details>
+ <summary>Theory</summary>
 </details>
 
 <Details>
