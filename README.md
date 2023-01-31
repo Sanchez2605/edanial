@@ -4,6 +4,7 @@
 * Day 2 - Details of IC Manufacturing Process
 * Day 3 - CMOS Fabrication Process in Deep Submicron and Ultra Deep Submicron Technology
 * Day 4 - Metal Oxide Semiconductor Structure
+* Day 5 - Metal Oxide Semiconductor Field Effect Transistor
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
@@ -438,8 +439,133 @@
 ### Topic - Metal Oxide Semiconductor Structure
 <details>
  <summary>Theory</summary>
+ 
+ **Metal-Oxide-Semiconductor (MOS) Device Structure**
+ * The capacitance of the MOS capacitor depends upon the voltage applied on the gate terminal.
+ * Usually the body is grounded when the gate voltage is applied.
+ * It is defined as the voltage at which there is no charge on the capacitor plates and hence there is no static electric field across the oxide
+ ![image](https://user-images.githubusercontent.com/121995963/215647142-83a2f834-66ea-40bf-bb44-ed6641b5841a.png)
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/215649323-3046360f-d0ce-4058-a355-4648f3e92987.png)
+ * At V(gate) > V(threshold), the capacitance is inverse proportional to frequency.
+
+ **Fabrication**  
+  * Oxidation: Process to create SiO2 on top of Silicon
+  * Metallization: Process to deposit poly-silicon on top of SiO2.
+
+ **Ideal MOS Junction or Capacitor**
+ * Ideal Characteristics 
+ * No charge in the device if V=0.
+ # ![image](https://user-images.githubusercontent.com/121995963/215654088-cc7b171c-5e7f-4b15-bc47-9e2444f096a4.png)
+ 
+ **Three Operation states of the MOSFET**
+ 
+ **Accumulation Mode**
+  
+ Accumulation Mode( Vgs < 0 v)
+ ![image](https://user-images.githubusercontent.com/121995963/215657929-ba00d0d7-6b6f-40a0-82c1-1ceb4729b69c.png)
+ * Represents the Accumulation mode in which the Vgs (Gate to Source )applied is less than zero (Negative).
+ * The negative charge tends to accumulate at the gate, because of these negative charges, the holes of the p-type substrate will get attracted underneath it. 
+ 
+ **Depletion Mode (0 < V < Vt)**
+                              
+ ![image](https://user-images.githubusercontent.com/121995963/215658200-f2a07716-1054-4feb-835a-9fe9b2469bee.png)
+ * The surface starts to deplete and the type of charge at the surface is -ve and gradually increases with the increase of voltage.
+ * The voltage at the surface carrier concentration = to bulk carrier concentration, which called weak inversion.
+ * The charge at the surface directly proportional to voltage.
+                              
+ **Strong Inversion Mode (Vgs > Vt)**
+   
+ ![image](https://user-images.githubusercontent.com/121995963/215660363-7612d2d7-5f24-467a-8b7e-f9f0aa9ac374.png)
+ * At threshold voltage, a channel form at the surface of the semiconductor due to inversion charge.
+ * Before threshold voltage, the charge comes from negatively charged ionized acceptor.
+ * After threshold voltage, more charge comes from the electrons rather than depleting the holes
+                               
+                         
+ **Non Ideal MOS Structure**
+ 
+ * Effect if fixed charge Qf:
+  * To create a zero charge non silicon negative volatage is required to give at gate terminal.
+  * By applying a negative volute at gate the surface charge at silicon will be zero
+  * Zero charge in the semiconductor conrresponds to flat-band condition of a MOS junctions.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/215669766-fdbfe746-3ae9-40f7-857a-917609d8caec.png)
+
+ * Effect of metal-semiconductor work function different, ɸms: 
+ * Electrons area always move from higher energy level to lower energy level.
+ * Electrons are transferred through wire.
+ * To remove the electrons from the semicondutor surface, we have to provide a negative voltage to the gate.
+![image](https://user-images.githubusercontent.com/121995963/215670166-ed7ea0f0-ae6c-4389-a8a6-aab4f0db39f5.png)
+
 </details>
 
 <Details>
 <summary>Lab</summary>
 </details>
+ 
+
+## Day 5
+### Topic - Metal Oxide Semiconductor Field Effect Transistor
+<details>
+ <summary>Theory</summary>
+
+ **MOSFET Structure**
+ 
+ * MOSFET view in Top: 
+ # ![image](https://user-images.githubusercontent.com/121995963/215696938-c6bb4fa3-f6fd-49eb-a64d-a5762071550c.png)
+
+ * MOSFET view in Front: 
+ #  ![image](https://user-images.githubusercontent.com/121995963/215699369-7c048125-e578-4dbc-8ea1-a579cd4f3653.png)
+
+ * N-MOSFET and P-MOSFET symbols:
+ # ![image](https://user-images.githubusercontent.com/121995963/215697263-7da4b000-2897-4a65-a624-44df95802401.png)
+
+ **MOSFET Operation (N-Channel Enchancment)**
+ 
+ * When this MOSFET is activated as ON this condition results in the maximum amount of the current flow through the device. This type of MOSFET is defined as N-channel MOSFET.
+
+ ![image](https://user-images.githubusercontent.com/121995963/215698097-382963f3-84a3-4f91-b9ff-01852ce5bc43.png)
+  
+**MOSFET Operation**
+ 
+ Case 1: Cutoff
+ * Gate voltage lower than threshold voltage, Vgs < Vt.
+ * No channel form between source and drain.
+                                                       
+ Case 2: Linear Operation
+ * Gate voltage slightly above threshold voltage, Vgs - Vt >= Vds. 
+ * N-channel start to form between drain and source.
+ * Current flow from drain to source, Id.
+ * Id increase linearly with Vgs increase.
+                                                       
+ Case 3: Saturation Mode
+ * Gate voltage much more higher than threshold voltage, Vgs - Vt < Vds
+ * At saturation point, the curent from drain to source is saturated even the Vds keep increasing
+
+ **MOSFET Channel Profile:**
+                                                                       
+ ![image](https://user-images.githubusercontent.com/121995963/215699988-270cdd83-b85b-472a-88b0-fd0a304fd503.png)
+                                                                       
+  **MOSFET Operation (P-Channel Enchancment)**
+                                                                       
+  * A P-channel MOSFET uses hole flow as the charge carrier, which has less mobility than the electron flow used in N-channel MOSFETs.
+  * The main difference is that P-channel MOSFETs require a negative voltage from the gate to the source (VGS) to turn on (as opposed to an N-channel MOSFET, which requires a positive VGS voltage)
+  * This makes P-channel MOSFETs the ideal choice for high-side switches.
+                                                                       
+ ![image](https://user-images.githubusercontent.com/121995963/215700784-dc32353e-4778-40a2-8edb-048e0f740fed.png)
+
+ **Different between N and P Channel:** 
+ 
+  ![image](https://user-images.githubusercontent.com/121995963/215697564-113128a3-c4fc-4958-b0de-95ee08c81841.png)
+                                                                       
+**Comparison between BJT, FET and MOSFET**
+         
+ ![image](https://user-images.githubusercontent.com/121995963/215700932-5d335742-41c8-429f-bf44-a69b0fb7fab6.png)
+
+ </details>
+ 
+ 
+<Details>
+<summary>Lab</summary>
+</details>
+ 
