@@ -564,8 +564,199 @@
 
  </details>
  
+<details>
+<summary>Lab</summary>
+</details>
  
-<Details>
+## Day 6
+### Topic - MOSFET Intrinsic Capacitances
+<details>
+ <summary>Theory</summary>
+ 
+ **Intrisic Capacitances: Cutoff Region** 
+ 
+ * Gate oxide capacitances between the gate and channel overlap
+ * Also its frngging capacitances between the gate and the source/drain regions
+ * Cgso = Cgdo = Cox * W * Ld
+ * No channel relate capacitances
+ 
+![image](https://user-images.githubusercontent.com/121995963/216217463-b5efaf2f-432e-46ac-a622-49661e7cf483.png) 
+ 
+  **Intrisic Capacitances: Linear Region** 
+* Cgso: gate-source overlap capacitance.
+* Cgdo: gate-drain overlap capacitance.
+* Cdb: drain-bulk reverse bias junction capacitance.
+* Csb: source-bulk reverse bias junction capacitance.
+* Cgsch: gate-channel oxide capacitance at source side.
+* Cgdch: gate-channel oxide capacitance at source side.
+* Cch-b: channel-bulk capacitance
+* There are additional capacitance compared to cutoff due to channel form between source and drain
+ 
+![image](https://user-images.githubusercontent.com/121995963/216217491-967f7e44-43c5-4867-9232-fdeaff4d446a.png)
+ 
+**Intrisic Capacitances: Saturatio Region** 
+* Cgso: gate-source overlap capacitance.
+* Cgdo: gate-drain overlap capacitance.
+* Cdb: drain-bulk reverse bias junction capacitance.
+* Csb: source-bulk reverse bias junction capacitance.
+* Cgsch: gate-channel oxide capacitance at source side.
+* Cch-b: channel-bulk capacitance
+* Cdb change because depletion region is bigger
+* There is no Cgdch due to pinch off 
+ 
+![image](https://user-images.githubusercontent.com/121995963/216217551-c14771f8-e1ad-4d41-846e-dcb86ca91058.png)
+
+![image](https://user-images.githubusercontent.com/121995963/216217170-dd3ae203-749d-4be1-a5f8-8a138c87c5d7.png)
+
+</details>
+
+<details>
+<summary>Lab</summary>
+</details>
+ 
+ ## Day 7
+### Topic - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variaton
+<details>
+ <summary> MOSFET Parameter Extraction Scaling</summary>
+ 
+ 
+ **MOSFET Level1 Model Paramater:**
+ 1. Vt0: Zero Body biases threshold voltage
+ 2. y(Gamma): Body bias parameter
+ 3. Lambda: Channel Length Modulation
+ 4 KN: Transconductance parameter
+ 5 PHI: Surface potential
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/216221930-c59e93e4-895f-4912-bf68-ce1ea959a206.png)
+
+**MOSFET Scaling**
+ 
+ * Scaling of a MOS transistor means reducing the critical parameter of the device
+ * To improve some performance features such as Speed, Application, Power Dissipation, while keeping the basic operational characteristics unchanged.
+ 
+ **Advantages of scaling in MOSFET:**
+ 
+ 1) Packaging Density: The packing density of the device improves as a result of scaling hence we can fit more transistors in the same space as before.
+ 2) Size Chip: As we can pack more number of transistors in the same space hence we can decrease the overall area of the chip
+ 3) Multifunction of Chip: As transistor size is reduced we can make multifunctional chips by reducing the area of chips.
+ 
+ **Disadvantages of Scaling**
+ 1) Effect on SiO2 thickness – on scaling oxide thickness eventually a sage will reach when oxide will lose its dielectric property.
+ 2) Subthreshold current – The carrier in the channel can be increased by increasing VDS voltage & also potential barrier can be reduced even VGS < VT. Thus, resulting current through the channel for higher values of VDS is called sub-threshold current.
+ 3) Noise problem – Scaling process inevitably results in noise problem, which degrades the reliability of high density chip.
+**Types of Scaling in MOSFETs:**
+ 
+ 1) Constant Field Scaling
+  * Attempts to preserve the magnitude of internal electric fields in the MOSFET, while the dimensions are scaled down by a factor of S.
+  * Charge densities must be increased by a factor of S in order to maintain the field conditions.
+ ![image](https://user-images.githubusercontent.com/121995963/216255295-80ab180b-b697-4c77-a25e-98684c875dbe.png)
+ 
+![image](https://user-images.githubusercontent.com/121995963/216255310-c89d80f6-2576-4b9f-aff6-9a4f3895c595.png)
+ 
+ 2) Constant Voltage  Scaling
+  * All dimension of the MOSFET ar reduced by a factor of S.
+  * The power supply voltage and the terminal volrage remain unchanged
+  * The doping densities must be increased by factor of S(2) to preserve the charge field relations
+ ![image](https://user-images.githubusercontent.com/121995963/216256297-4140572e-71fb-4f19-a165-9b7f85044c24.png)
+ 
+![image](https://user-images.githubusercontent.com/121995963/216256314-d4b4b9c9-c902-4211-973b-afedc1d28618.png)
+</details>
+
+ <details>
+   <summary>Short Channel Effects</summary>
+  
+ **Short Channel Effect**
+  
+  * A MOSFET device is considered to be short when the channel length is the same order of magnitude as the depletion layer widths (Xdb, Xds) of the source and drain juntion.
+  * Aslo can be defined as Short channel device if the effective channel lenght equal to the source and drain juntion depth xj.
+  * As the channel lenght L is reduced to increase both the operation speed and the number of components per chip arise.
+    
+  ![image](https://user-images.githubusercontent.com/121995963/216262667-abb36f6b-51d1-4396-b193-e7581a3255b2.png)
+
+  * The short channel effects are attributed to two physical phenomena:
+   1) the limitation imposed on electron drift characteristics in the channel.
+   2) the modification of the threshold voltage due to the shortening channel lenght.
+  
+
+  **7 different short channel effects established :**
+   1) Drain Induced Barrier Lowering
+      * Increases in drain voltage reduces the barrier face by electrons or holes in the source allowing them to go from ssource to drain where gate voltage remain uncharged.
+      * Gate looses the contorl of flow of current throug MOS and become as good as redundant. 
+      * The channel current that flows under this conditions (VGS<VT0) is called the sub-threshold current.
+                                                                       
+ ![image](https://user-images.githubusercontent.com/121995963/216262884-cdff4d64-e4bb-40c3-9a01-51f2be950178.png)
+
+   2) Mobility degradation or surface scattering
+       * Frm small geometry MOSFETs the electrons monility in the channel depends on a two dimensional electric filed (Ex, Ey). 
+       * The surface scattering occurs when electrons are accelarated towards the surface by vertical compenent of the electric filed Ex.
+       * Causes a reduction in the mobility
+       * The average surface mobility is about hald as much as that of the bulk mobility
+                                                                       
+  ![image](https://user-images.githubusercontent.com/121995963/216264558-2e65bc40-a5ca-4d01-b7dc-cf54a4e53dc4.png)
+                                                                     
+  3) Velocity Saturation
+     * The electron velocity is related to the electric filed through the mobility: V=uE
+     * For higher field the velocity does not increase with electric field, we have defradation of mobility because of scattering by vertical field. 
+     * This leads to earlier saturation of current. 
+     * The velocity saturation reduces the transconductance of short-channel devices in the saturation condition.
+       ![image](https://user-images.githubusercontent.com/121995963/216266131-3fae76b6-f538-4b0e-a540-02f373f8681f.png)
+
+  4) Impact Ionization
+     * The presence of high longitudinal fields can accelerate electrons that may be able of ionizing Si atoms by impacting against them
+     * Most of the e- are attracted by the drains, so it has a higher concentration of holes near the sources.
+     * If the holes concentration on the sources is able to creates a voltage drop on the source-substante n-p juntion of about 0.6V then 
+         i) e- injected from source to substrate
+         ii) e- travel towards the drain, increasing their energy and create new e-h pairs
+         iii) e- may escape the drai fields and affect other devices.
+![image](https://user-images.githubusercontent.com/121995963/216269201-ccc680a3-8b4f-49e3-aac0-1a5158a8974e.png)
+
+  5) Hot Electrons
+     * Caused by electrons flowing in the channel for large VDS
+     * e- arriving at the Si-Si02 interface with enough kinetic evergy >3.1ev to surmount the surface potential barrier are injected into the oxide.
+     * This may degrade permanently the C-V characteristics of a MOSFETs.
+  
+ 6) Sub threshold conduction
+   * When the gate voltage is high, the transistor is strongly ON. When the gate falls below Vt, the exponential decline in current appears as a straight line on the logarithmic scale.
+   * This regime of Vgs < Vt is called weak inversion
+   * The subthrehold leakage current increases significantly with Vds because of drain-induced barrier lowering.
+   * There is lower limit on Ids set by drain junction leakage that is excerbated by the negative gate voltage. 
+  ![image](https://user-images.githubusercontent.com/121995963/216272357-9daf9752-8369-4b21-a2e0-988f57851239.png)
+
+ 7) Vt toll off
+ </details>
+
+<details>
+<summary>PVT Variations: Processes Variation</summary>
+ 
+  **Variation in the process parameters:**
+  * impurity concentration densities
+  * oxide thicknesses
+  * diffusion depths
+  
+  * These are caused b non-uniform conditions during the deposition and/or the diffusion of the impurities.
+  * This introduces the variation of the sheet resistances and threhold voltage of transistor.
+
+ **Variation in the dimensions:**
+  * width and length variation of MOS Transistors, resistors and capacitors.
+  * mismatches is emitter area in Bipolar devices.
+ 
+ * Thse are caused by limited resolution of photolithographic process.
+ * This changes the device performances in the circuit.
+ 
+ **Process Corners**
+ 
+ There are 5 process corners:
+ 1. TT ( Typical Typical): NMOS and PMOS Typical
+ 2. SS (Slow Slow) : NMOS Slow and PMOS Slow
+ 3. FF (Fast Fast) : NMOS Fast and PMOS Fast
+ 4. SF (Slow Fast) : NMOS Slow and PMOS Fast
+ 5. FS (Fast Slow) : NMOS Fast and PMOS Slow
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/216277312-99a25c57-8073-47be-ac35-88210ca99767.png)
+ 
+</details> 
+  
+<details>
 <summary>Lab</summary>
 </details>
  
