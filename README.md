@@ -5,6 +5,8 @@
 * Day 3 - CMOS Fabrication Process in Deep Submicron and Ultra Deep Submicron Technology
 * Day 4 - Metal Oxide Semiconductor Structure
 * Day 5 - Metal Oxide Semiconductor Field Effect Transistor
+* Day 6 - MOSFET Intrinsic Capacitances
+* Day 7 - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variaton
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
