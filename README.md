@@ -6,7 +6,7 @@
 * Day 4 - Metal Oxide Semiconductor Structure
 * Day 5 - Metal Oxide Semiconductor Field Effect Transistor
 * Day 6 - MOSFET Intrinsic Capacitances
-* Day 7 - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variaton
+* Day 7 - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variation
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
@@ -617,7 +617,7 @@
 </details>
  
  ## Day 7
-### Topic - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variaton
+### Topic - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variation
 <details>
  <summary> MOSFET Parameter Extraction Scaling</summary>
  
