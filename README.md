@@ -287,6 +287,7 @@
 
 <Details>
 <summary>Lab</summary>
+[Fabrication-Process-and-Layout-Assignment Eystein.pdf](https://github.com/Sanchez2605/edanial/files/10741409/Fabrication-Process-and-Layout-Assignment.Eystein.pdf)
 </details>
 
 
@@ -435,6 +436,8 @@
 
 <Details>
 <summary>Lab</summary>
+[Day3-Assignment-DSM-and-UDSM-Fabrication-Process Eystein.pdf](https://github.com/Sanchez2605/edanial/files/10741421/Day3-Assignment-DSM-and-UDSM-Fabrication-Process.Eystein.pdf)
+
 </details>
 
 ## Day 4
