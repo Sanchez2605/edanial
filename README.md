@@ -572,6 +572,7 @@
  
 <details>
 <summary>Lab</summary>
+**No Assignment/Lab**
 </details>
  
 ## Day 6
