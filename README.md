@@ -506,6 +506,7 @@
 
 <Details>
 <summary>Lab</summary>
+ [Day4-Assignment-Metal-Oxide-Semiconductor-Structure.pdf](https://github.com/Sanchez2605/edanial/files/10753263/Day4-Assignment-Metal-Oxide-Semiconductor-Structure.pdf)
 </details>
  
 
