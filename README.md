@@ -7,6 +7,8 @@
 * Day 5 - Metal Oxide Semiconductor Field Effect Transistor
 * Day 6 - MOSFET Intrinsic Capacitances
 * Day 7 - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variation
+* Day 8 - CMOS Inverter
+* Day 9 - Combinational Digital Logic Circuits
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
@@ -621,7 +623,7 @@ No Assignment/Lab
 <summary>Lab</summary>
 </details>
  
- ## Day 7
+## Day 7
 ### Topic - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variation
 <details>
  <summary> MOSFET Parameter Extraction Scaling</summary>
@@ -761,6 +763,164 @@ No Assignment/Lab
  
  ![image](https://user-images.githubusercontent.com/121995963/216277312-99a25c57-8073-47be-ac35-88210ca99767.png)
  
+</details> 
+  
+<details>
+<summary>Lab</summary>
+</details>
+ 
+## Day 8
+### Topic - CMOS Inverter
+<details>
+ <summary>CMOS Inverter</summary>
+ 
+ **What is CMOS Inverter?**
+ * CMOS inverter definition is a device that is used to generate logic functions is known as CMOS inverter and is the essential component in all integrated circuits. 
+ * A CMOS inverter is a FET (field effect transistor), composed of a metal gate that lies on top of oxygen’s insulating layer on top of a semiconductor.
+ * These inverters are used in most electronic devices which are accountable for generating data n small circuits.
+ ![image](https://user-images.githubusercontent.com/121995963/219825337-ace366ff-e206-4c4d-9f9a-cfff74ecb6f6.png)
+ 
+ **CMOS Inverter Schematic Diagram**
+ ![image](https://user-images.githubusercontent.com/121995963/219825385-129ba539-309f-4bc6-a2b0-931440f84c51.png)
+
+ * CMOS Design Metrics:
+  1) Cost: Expressed by  the complexity and area.
+  2) Integrity and robustness: Expressed by the static (steady-state) behavior.
+  3) Performance: Determined by the dynamic (or transient) response.
+  4) Energy Efficiency: Set by the energy and power consumption.
+ 
+ **CMOS Inverter: Static Charracteristics**
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219825552-ddf234c9-4395-415d-bd5e-a62edbb51d86.png)
+ * If the input logic is zero (0) then the output will be high (1) whereas, if the input logic is one (1), then the output will be low (0).
+ * Rail to rail swing shall result high noise margin
+ * No direct path exit  between supply and ground. Static power almost zero. 
+
+ **Inverter Static Characteristics or VTC**
+ 
+ * The quality of the inverter can be measured frequently by using the VTC or voltage transfer curve, which is plotted between input voltage (Vin) and output voltage (Vo).
+ * From the following static characteristics, the parameters of devices like gain, operating logic levels & noise tolerance, and noise can be obtained.
+ 
+![image](https://user-images.githubusercontent.com/121995963/219825943-6c699dfa-1dd3-454c-a6c5-1ddf3339bd9e.png)
+
+ * The VTC or voltage transfer curve looks like an inverted step-function that specifies accurate switching in between ON & OFF however in real devices, a gradual transition region exists.
+ * The voltage transfer curve specifies that for less input voltage Vin, the circuit generates high voltage Vout, whereas, for high input, it generates 0 volts.
+ * The transition region slope is a measure of quality – steep slopes yield exact switching.
+ * The tolerance toward noise can be calculated by evaluating the smallest input to the highest output for every region of ON or OFF operation.
+ 
+ **CMOS Inverter: MOSFET Strengh Variation
+ ![image](https://user-images.githubusercontent.com/121995963/219826199-8a4a217a-117c-441d-9420-ed4407d8b81c.png)
+
+ * Current is proportional to width. Therefore, the transitor will be more stronger. 
+ * When increasing the NMOS size, the curve will shift to left from middle. Therefore, NMOS will conductor eventhough with less voltage and resistances will        decreases. 
+ * When increasing the PMOS size, it will take more voltage and the curve will shift to right from middle.  
+ 
+ **CMOS Inverter: Noise Margin**
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219826556-df7fcbf8-505e-4cf9-8bd6-3f04bbb27b58.png)
+
+ * There are two noise margins we must consider, and they are as follows: noise margin high (NMH) and noise margin low (NML). 
+ * The minimum voltage output of the driving device for a logic high (VOH min) must be larger than the minimum voltage input (VIH min) of the receiving device for a logical high.
+ *  Since there is noise present on the wire, a logic high signal at the output of the driving device may arrive with a lower voltage at the input of the receiving device.
+ * Slope is steep, less transition region, more noise margin
+
+ **CMOS Inverter: Dynamic Behavior**
+ 
+![image](https://user-images.githubusercontent.com/121995963/219826865-891b6cf3-6140-434d-9c38-26a3e27f4c40.png)
+
+ * High Performances CMOS circuit should have less propagation delay, less rise time and less fall time.
+ * Propagation delay determine by the time it takes to charge and discharge the load capacitances CL through the PMOS and NMOS tarnsistor.
+ * If CL increases:
+   1) Propagation (PD) delay increases.
+   2) Output rise time (Trise) increases.
+   3) Output fall time (Tfall) increases.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219827018-8e261f3c-fea7-4ef7-85ae-47e7e534bedd.png)
+
+ Rise Time: The time required for the output voltage to rise from 10% to 90% of the supply voltage.
+![image](https://user-images.githubusercontent.com/121995963/219827088-f9e0b864-cbed-481b-bdd8-a4799168a02f.png)
+
+ Fall Time: The time required the output voltage to fall from 90% to 10% of the supply voltage.
+ ![image](https://user-images.githubusercontent.com/121995963/219827130-67763f5c-3358-489e-abc2-4ed4a3a8bd61.png)
+
+ **CMOS Inverter: Progation Delay**
+
+ Progation Delay (Tp):
+ * Input to output delay during the signal transition (at 50%)
+ * Tplh: Propagtion delay at low to high transition at output.
+ * Tplh: Progation delay at high to low transition at output.
+ * Propagation Delay or tp: It is (tpHL + tpLH)/2.
+
+ ![image](https://user-images.githubusercontent.com/121995963/219827287-8942e3b6-190e-47a0-89d8-96d9bb61350a.png)
+
+ ![image](https://user-images.githubusercontent.com/121995963/219827282-329a0ff7-897e-4a42-b4ce-734ee3326bc9.png)
+
+**CMOS Inverter: Progation Delay Summary**
+ 1) Reduce CL
+   * Internal diffusion capacitance.
+   * Interconnect capacitance.
+   * Fanout capacitance.
+ 
+ 2) Increase the W/L ratio of transistors
+   * This is most powerful and effective performance optimization tool in the hands of the designer. 
+   * W/L ratio proportional to CL: once intrinsic capacitance starts dominating CL increasing gate size does not longer help in reducing the delay.
+     * Increase area (self loading)
+     * Increase the fanout factor of the driving gate
+ 
+ 3) Increase VDD
+   * Delay of a gate can be modulated by modifying the supply voltage.
+ 
+ **CMOS Inverter: Dynamic Power Consumption**
+ 
+![image](https://user-images.githubusercontent.com/121995963/219828483-59d80b72-9688-4178-acad-eb528cf4c3a9.png)
+
+![image](https://user-images.githubusercontent.com/121995963/219828490-e4d964ea-c9ff-40ca-89be-28dcf2911a7c.png)
+
+* In order to minimize the power dissipation in digital integrated circuits three techniques are used: 
+ 1) Voltage Scaling 
+ 2) Clock Frequency Reduction  
+ 3) Switched  Capacitance Reduction. In voltage scaling the supply voltage is reduced.
+* As the dynamic power dissipation and short circuit power dissipation are dependent on power supply voltage, reducing the power supply voltage reduces the power     dissipation. 
+* In clock frequency reduction technique the clock frequency of the processors is reduced.
+* Reducing clock frequency is not leads to efficient power reduction. 
+* In switched capacitance reduction, reducing the switched capacitance is helpful to reduce the clock frequency.
+ 
+**CMOS Inverter: Static Power Consumption**
+
+ **Static Power Consumption**
+ 
+![image](https://user-images.githubusercontent.com/121995963/219828565-fdcb42c2-fc43-49f2-a377-d1b864b3315d.png)
+
+* The static or steady state power dissipation of a circuit is expressed as;
+* 𝑃(𝑠𝑡𝑎𝑡.)=𝐼(𝑠𝑡𝑎𝑡.) 𝑉𝐷𝐷
+* Ideally, 𝐼_(𝑠𝑡𝑎𝑡.)=0 as the PMOS and NMOS devices are never on simultaneously in steady state operation.
+* But a leakage current flowing through the reverse biased diode junctions of the transistor, located between source and drain and the substrate.
+* In general the leakage currents are very small and can be ignored. However the junction currents are caused by thermally generated carriers.
+* Sub-threshold Current: Drain-to-source current even when Vgs is smaller than the threshold voltage.
+ 
+**Power Dissipation Summary**
+
+ ![image](https://user-images.githubusercontent.com/121995963/219828630-c2ce2e84-473f-4b46-9ece-00ad44600a06.png)
+
+* The total power of the CMOS inverter is expressed as the sum of the its three components: 
+ * 𝑃𝑇𝑜𝑡𝑎𝑙=𝑃𝑑𝑦𝑛+𝑃𝑑𝑝+𝑃(𝑠𝑡𝑎𝑡.) 
+ * 𝑃𝑑𝑦𝑛= Dominant 
+ * 𝑃𝑑𝑝= Can be kept within bounds under the designers control 
+ * 𝑃(𝑠𝑡𝑎𝑡.)= Ignorable but significant in sub-micron and deep sub-micron technologies.
+ 
+**CMOS Inverter Advantages:**
+
+* The CMOS inverter’s steady-state power dissipation is negligible virtually, apart from small power dissipation because of leakage currents.
+* The VTC (voltage transfer characteristic) exhibits a complete o/p voltage swing in between 0 V & VDD, and the transition of voltage transfer characteristic is normally very sharp. Thus, the characteristics of the CMOS inverter look like an ideal inverter.
+* These inverters use electricity once they are switched ON & OFF resulting in less power consumption. As a result, these inverters generate extremely less waste heat to make them highly efficient, so used in small and delicate electronic devices.
+* These inverters include high noise immunity, which lets them block both incoming & outgoing frequency spikes.
+* These are low-cost to produce mass.
+
+**CMOS Inverter Disadvantages:**
+
+* As compared to other inverters, the switching speed of the CMOS inverter is high.
+* These are very difficult to fabricate due to both the transistors used on the same Silica piece.
+* It uses two transistors to make an inverter, so it uses more space on the IC as compared to the NMOS inverter.
 </details> 
   
 <details>
