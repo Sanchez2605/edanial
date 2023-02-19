@@ -1077,7 +1077,7 @@ Static Properties of Complementary CMOS Gates (NOR Gates)
  * Hold Time: minumum amount of the time after the clock's active edge during which data must be stable.
  * violation in this case may cause incorrect data to be latched, which is called hold violation.
  
-  ** Reason for Setup Time**
+  **Reason for Setup Time**
 
  ![image](https://user-images.githubusercontent.com/121995963/219943107-d1595e1a-e584-4b72-b6f9-3e59dc8a32fb.png)
 
@@ -1086,7 +1086,7 @@ Static Properties of Complementary CMOS Gates (NOR Gates)
  * When CK=Low, TG1 is switched OFF and TG2 is switched ON. Therefor, the LHS latching circuit kicks into action latching the value present at node D and producing it in the output (Q=D)
  * Any data send before the setup time, will produce a stale value at node 5. This defined the reason for the setup time withhin a flop.
  
- ** Reason for Hold Time**
+ **Reason for Hold Time**
  
 ![image](https://user-images.githubusercontent.com/121995963/219943255-7cb6371c-8f9b-4c84-a5fa-a1752e18b3ee.png)
 
