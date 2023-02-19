@@ -927,3 +927,95 @@ No Assignment/Lab
 <summary>Lab</summary>
 </details>
  
+## Day 9
+### Topic - Combinational Digital Logic Circuits
+<details>
+<summary>Complementary MOS Logic</summary>
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219938871-108a3c91-52d3-48b7-9bf8-83136602091d.png)
+
+ Five important observations during the construction of PUN and PDN networks:
+ 
+ 1) A transistor can be thought of as a switch controlled by its gate terminal.
+ 2) An NMOS transistor is ON when the controlling signal is high and is OFF when the controlling signal is low.
+ 3) A PMOS transistor act as an inverse switch that is ON when the controlling signal is Low and off when the controlling signal is High.
+ 4) PUN is constructed using PMOS decives, while PDN is constructed using NMOS devices.
+ 5) The primary reasons for this choice is that NMO transistor produce "strong zeros" and PMOS devices produce "strong ones".
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219939066-5b8de0bf-0800-473e-91fb-dde4144dc976.png) ![image](https://user-images.githubusercontent.com/121995963/219939070-9b69bee7-5a49-4e52-811b-c7dbb1db6b5c.png)
+
+* Construction Rules:
+  * NMOS in series: NAND Function
+  * NMOS in parallel: NOR Function
+  * PMOS in series: NOR Function
+  * PMOS in parallel: NAND Function
+ 
+ * Pull-up and pull-down networks of a complementary CMOS structure are dual netorks.
+ * The complementary gate is naturally inverting, implementing only functions such as NAND, NOR and XNOR.
+ * The number of transistors required to implement an N-input logic gate is 2N.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219939285-80b3d6ce-dcb7-4f9b-aac8-ed92a20fed72.png)
+
+ **Static Properties of Complementary CMOS Gates**
+ 
+Complementary CMOS gates inherits all the nice properties of the basic CMOS inverters
+* Rail-to-rail swing, 𝑉𝑂𝐻 = 𝑉𝐷𝐷 and 𝑉𝑂𝐿 = 0
+* No static power dissipation
+* VTC and noise margin analysis is little bit complicated as these parameters depends upon the data inputs applied to gate.
+
+ Static Properties of Complementary CMOS Gates (NAND Gates)
+ ![image](https://user-images.githubusercontent.com/121995963/219939377-64a61859-b2af-44ea-a562-efe964862c87.png)
+
+Static Properties of Complementary CMOS Gates (NOR Gates)
+
+ ![image](https://user-images.githubusercontent.com/121995963/219939413-616672c2-19af-4a93-a431-a53551918a41.png)
+
+**Progation Delay of Complementary CMOS Gates**
+
+ * The computation of propagation delay proceeds in a fashion similar to static inverters.
+ * For delay analysis, each transistor is modeled as a resistor in series with an ideal switch.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219939511-8c02634f-f65e-42d5-9645-59eff10b0779.png)
+
+ **Which Logic Implementation is preffered: NAND or NOR
+ * For performance comparison inverter should be the reference here:
+ 
+![image](https://user-images.githubusercontent.com/121995963/219939656-5f276cfd-18d2-475f-9b8a-05ddfb0ff559.png)
+
+* For NAND gate, to make 𝑡𝑃𝐻𝐿−𝑁𝐴𝑁𝐷 = 𝑡𝑃𝐻𝐿−𝐼𝑁𝑉 , we have to reduce the resistance of PDN devices of NAND gate to half of the previous.
+* This can be possible if the size of the PDN devices will be two times of the previous.
+* For NOR Gate, to make 𝑡𝑃𝐻𝐿−NOR = 𝑡𝑃𝐻𝐿−𝐼𝑁𝑉,we have to reduce the resistance of PUN devices of NOR gate to half of the previous.
+* This is the same with NOR gate except that the PUN will be two times of the previous.
+* Therefore, to get the same delay as the inverter NOR implementation required more area compared to NAND implementation. 
+* So, NAND implementation is preferred over NOR implementation.
+ 
+**Complex Logic Circuit**
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219939976-1bb27664-40ed-4dcf-ac1b-471a2c13fb0a.png)
+
+ * There are 2 circuit which are: 1) AND-OR-Invert (AOI) logiv 2) OR-AND-Invert (OAI) logiv
+ * The AOI gates enables the sum of prodcuts realization of Boolean function in one logic stage.
+ * The OAI gates, enables the product of sums realizationg of Boolen function in one logic stage.
+ * The pull down networks of AOI gate consists of parallel branches of series connected NMOS driver transistor.
+ 
+ **CMOS Transmission Gate**
+ 
+![image](https://user-images.githubusercontent.com/121995963/219940253-60f25583-586d-4987-97cb-98c73fba9b2e.png)
+
+* Consist of one NMOS and one PMOS transistor connected in parallel.
+* Gate voltages applied to these two transistors are also set to be complementary signals.
+* Opreates as Bi-directional switch between the nodes A and B, that is controlled by signal C.
+* Also used to make combinational circuit to reduce transistor counts
+* Used in latch and Flip-flops.
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219940284-b23d5482-edce-4eaa-b1ff-db77a35b0a08.png)
+
+ **Combinational Circuit using Transmission Gate (TG)
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219940279-15818b33-de1a-43b2-bdbe-6f922adb470f.png)
+
+</details> 
+  
+<details>
+<summary>Lab</summary>
+</details>
