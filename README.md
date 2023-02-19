@@ -9,6 +9,7 @@
 * Day 7 - MOSFET Parameter Extraction Scaling, Short Channel Effects and PVT Variation
 * Day 8 - CMOS Inverter
 * Day 9 - Combinational Digital Logic Circuits
+* Day 10 - Sequential Digital Logic Circuits
 
 ## Day 1
 ### Topic - Fundamentals of VLSI Design and overview of Sand-to-Silicon
@@ -1019,3 +1020,84 @@ Static Properties of Complementary CMOS Gates (NOR Gates)
 <details>
 <summary>Lab</summary>
 </details>
+  
+  
+## Day 10
+### Topic - Sequential Digital Logic Circuits
+<details>
+<summary>Sequential Logic Circuit</summary>  
+
+ ![image](https://user-images.githubusercontent.com/121995963/219941788-1134c693-5c6f-4250-ac25-20e33d8acca9.png)
+
+* The output of the circuit depends upon the current values of the inputs as well as previous input values.
+* Also, it has memory to store data.
+* basic regenerative ciruits can be classified into three main groups 1) Bistable circuit, 2) Monostable circuit and 3) Astable circuits.
+* The bistable circuit are widely used in all the latches, flip-flops, register and memory elements are made through bistable circuits.
+ 
+**Electrical Behaviour of Bistable Circuit**
+
+ ![image](https://user-images.githubusercontent.com/121995963/219941985-55112a8e-48c1-4ffa-9a89-9bf8e5da752d.png)
+
+* It has 3 operating points: 2 stable points and 1 unstable points
+* if the circuit is initially operating at once ofo  these two stable points, it will preserve this stage unless it is forced externally to change its operating points.
+* Gain at two stable points are less than 1.
+* Gain at unstable point is larget than 1 in both the inverters.a small perturbation at the input of any of the inverters will e amplified, causing the operating point to move to one of the stable operating points.
+* Conclusion: The third point is unstable, so the circuit has two stable points, so it is called bistable circuit.
+ 
+ **SR Latch**
+ ![image](https://user-images.githubusercontent.com/121995963/219942121-bdb5ca4d-d825-4efd-9ec8-77e4e911122f.png)
+
+  **JK Latch Clock Period**
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219942162-7bc9e242-fdb1-407c-9232-ed1e3a8216c6.png)
+  
+ **Master Slave JK Flip Flop**
+
+ ![image](https://user-images.githubusercontent.com/121995963/219942204-65d4d4e2-2e05-4065-aa4d-89e7c28a835c.png)
+
+ * Timing limitation encountered in JK Latch can be prevented by using two latch stages in cascaded configuration.
+ * The input latch, called master is activated when the clock pulse is high
+ * The output latch is called slave is activated when the clock pulse is low.
+ 
+ **Convention CMOS Latches**
+ 
+ ![image](https://user-images.githubusercontent.com/121995963/219942350-69fe2705-692a-4b79-9eba-c57dcaf622ee.png)
+
+ ![image](https://user-images.githubusercontent.com/121995963/219942368-eaecef1c-f584-4bd2-acd2-eca070a7d18a.png)
+
+ ![image](https://user-images.githubusercontent.com/121995963/219942609-ad807bea-1c2c-42ea-8ea8-d13122d1bba9.png)
+
+ ![image](https://user-images.githubusercontent.com/121995963/219942624-1286d77b-7e02-4659-905b-9065aa8465b8.png)
+
+ 
+ **Setup and Hold Time**
+ 
+ * Setup Time: mininmum amount of the time before the clock's active edge that the data must be stable for it to be latched correctly.
+ * Any violaton may cause incorrect data to be captured known as setup violation.
+ * Hold Time: minumum amount of the time after the clock's active edge during which data must be stable.
+ * violation in this case may cause incorrect data to be latched, which is called hold violation.
+ 
+  ** Reason for Setup Time**
+
+ ![image](https://user-images.githubusercontent.com/121995963/219943107-d1595e1a-e584-4b72-b6f9-3e59dc8a32fb.png)
+
+ * When CK=High, input D is traverse through 1-2-3-4 and reflected at node 5 after some time.
+ * The time that it takes D to reach node 5 called setup time.
+ * When CK=Low, TG1 is switched OFF and TG2 is switched ON. Therefor, the LHS latching circuit kicks into action latching the value present at node D and producing it in the output (Q=D)
+ * Any data send before the setup time, will produce a stale value at node 5. This defined the reason for the setup time withhin a flop.
+ 
+ ** Reason for Hold Time**
+ 
+![image](https://user-images.githubusercontent.com/121995963/219943255-7cb6371c-8f9b-4c84-a5fa-a1752e18b3ee.png)
+
+ * D given to the inverter or any other logic sitting before TG1, is a part of the flip-flop.
+ * The CK and CK' control the TG, comes after buffer and inverters.
+ * There is a finite delay between CK and CK', so TG takes time to ON or OFF.
+ * In the mean time it is neccessary to maintain a stable value at the input to ensure a stable value at node 2, then tarnslatee to the output defining the reason for hold time.
+ 
+</details> 
+  
+<details>
+<summary>Lab</summary>
+</details>
+  
